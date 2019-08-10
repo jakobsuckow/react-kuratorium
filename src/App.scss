@@ -73,6 +73,16 @@ ul {
   
 }
 
+.welcome span {
+	animation: rotation 1s infinite linear;
+	text-align: center;
+}
+
+.rotate {
+	animation: rotation 1s infinite linear;
+	text-align: center;
+}
+
 img.logo, p {
   max-width: 320px;
 }
@@ -85,10 +95,7 @@ img.logo, p {
 
 /* Animations: */
 
-.rotate {
-	animation: rotation 1s infinite linear;
-	text-align: center;
-}
+
 
 @keyframes rotation {
 	from {
