@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Kuratorium",
+  "name": "A project-based record label, initiated and operated by Lennart Wiehe and associates.",
   "icons": [
     {
       "src": "favicon.ico",
