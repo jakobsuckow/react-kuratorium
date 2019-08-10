@@ -22,7 +22,7 @@ const Dates = () => {
     return (
         <div>
             {isLoading ? (
-                <div>Loading Dates... <div class="rotation">|</div></div>
+                <div>Loading Dates... <span class="rotate">|</span></div>
             ) : (
                 <>
                 {dates.map(date => (
