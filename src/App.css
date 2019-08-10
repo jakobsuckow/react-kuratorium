@@ -2,3 +2,15 @@
   margin: 0;
   padding: 0;
 }
+
+.row {
+    display: grid;
+    grid-template-columns: 33% 1fr 1fr 1fr;
+    height: 100vh;
+}
+
+.row > div {
+  border: 1px solid #000;
+  overflow-y: scroll;
+}
+
