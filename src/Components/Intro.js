@@ -6,6 +6,7 @@ const Intro = () => {
         <div className="welcome">
             <img src={logo} alt="Kuratorium" className="logo" />
             <p>A project-based record label, initiated and operated by Lennart Wiehe and associates.</p>
+            <div class="rotate">|</div>
         </div>
     )
 }

@@ -81,3 +81,20 @@ img.logo, p {
 .event {
   margin-bottom: 6px;
 }
+
+
+/* Animations: */
+
+.rotate {
+	animation: rotation 1s infinite linear;
+	text-align: center;
+}
+
+@keyframes rotation {
+	from {
+			-webkit-transform: rotate(0deg);
+	}
+	to {
+			-webkit-transform: rotate(359deg);
+	}
+}
