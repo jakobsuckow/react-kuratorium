@@ -26,12 +26,12 @@ const Dates = () => {
             ) : (
                 <>
                 {dates.map(date => (
-                <>
-                <p>{date.date}</p>
-                <p>{date.club}</p>
-                <p>{date.city}</p>
-                <p>{date.artist}</p>
-                </>
+                <ul key={date.date} className="event">
+                <li><p>{date.date}</p></li>
+                <li><p>{date.club}</p></li>
+                <li><p>{date.city}</p></li>
+                <li><p>{date.artist}</p></li>
+                </ul>
             ))}
                 </>
             )}

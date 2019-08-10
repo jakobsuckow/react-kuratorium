@@ -3,6 +3,7 @@ import './App.scss';
 // Import Slides
 import Dates from './Components/Dates';
 import Intro from './Components/Intro';
+import Releases from './Components/Releases'
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
         <Intro />
       </div>
       <div>second</div>
-      <div>third</div>
+      <div>
+        <Releases />
+      </div>
       <div>
         <Dates />
 
