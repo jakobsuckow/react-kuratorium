@@ -1,12 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import Dates from './Components/Dates'
 
 function App() {
   return (
     <div className="row">
-      <div>This is the first div</div>
+      <div>first</div>
       <div>second</div>
       <div>third</div>
       <div>
