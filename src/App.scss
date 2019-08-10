@@ -1,13 +1,58 @@
 $bg-c: #cc6f57;
 
+
+
 * {
   margin: 0;
   padding: 0;
 }
 
-body {
-  background-color: $bg-c;
+
+html {
+	font-size: 62.5%
 }
+
+body {
+	height: 100%;
+	width: 100%;
+	background-color: $bg-c;
+	font-size: 1.2rem
+}
+
+a,
+a:active,
+a:hover,
+a:visited {
+	color: #000
+}
+
+input,
+button {
+	border: 1px solid #000;
+	background: transparent;
+	border-radius: 0px;
+	padding: 1px 2px;
+	font-family: inherit
+}
+
+select {
+	border: 1px solid #000;
+	-webkit-appearance: none;
+	border-radius: 0px;
+	background: transparent;
+	font-family: inherit
+}
+
+fieldset {
+	display: block
+}
+
+ul {
+	list-style: none
+}
+
+
+
 
 .row {
     display: grid;
@@ -18,5 +63,17 @@ body {
 .row > div {
   border: 1px solid #000;
   overflow-y: scroll;
+}
+
+
+.welcome {
+  margin-top: 40%;
+	padding-left: 18px;
+  vertical-align: middle
+  
+}
+
+img.logo, p {
+  max-width: 320px;
 }
 
