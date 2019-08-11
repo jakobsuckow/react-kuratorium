@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3840ea0b.chunk.css",
+    "main.js": "/static/js/main.c2cc85da.chunk.js",
+    "main.js.map": "/static/js/main.c2cc85da.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.409b5e45.js",
+    "runtime~main.js.map": "/static/js/runtime~main.409b5e45.js.map",
+    "static/js/2.124d8408.chunk.js": "/static/js/2.124d8408.chunk.js",
+    "static/js/2.124d8408.chunk.js.map": "/static/js/2.124d8408.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.a468d21d6d822c895a7f227202720dbb.js": "/precache-manifest.a468d21d6d822c895a7f227202720dbb.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.3840ea0b.chunk.css.map": "/static/css/main.3840ea0b.chunk.css.map",
+    "static/media/kuratorium.png": "/static/media/kuratorium.adff2626.png"
+  }
+}

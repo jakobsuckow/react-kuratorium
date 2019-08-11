@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/jakobsuckow/react-kuratorium#readme",
   "dependencies": {
-    "concurrently": "^4.1.1"
+    "concurrently": "^4.1.1",
+    "path": "^0.12.7"
   }
 }
