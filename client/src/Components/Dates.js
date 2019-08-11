@@ -13,7 +13,8 @@ const Dates = () => {
 
     const getDates = async() => {
         setIsLoading(true);
-        const response = await fetch('https://api.sheety.co/b28ce0df-7339-48f5-8093-41b2f47d2a08');
+        const url = 'https://api.sheety.co/b28ce0df-7339-48f5-8093-41b2f47d2a08'
+        const response = await fetch(url);
         const data = await response.json();
         setDates(data);
         setIsLoading(false);
