@@ -1,6 +1,8 @@
 $bg-c: #cc6f57;
 
-
+@font-face {
+	font-family: "Prophet";
+	src: url("/assets/fonts/Prophet-Regular.otf") format("opentype")}
 
 * {
   margin: 0;
@@ -13,6 +15,7 @@ html {
 }
 
 body {
+	font-family: "Prophet";
 	height: 100%;
 	width: 100%;
 	background-color: $bg-c;
