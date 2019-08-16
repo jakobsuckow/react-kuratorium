@@ -5,8 +5,9 @@ const Intro = () => {
     return (
         <div className="welcome">
             <img src={logo} alt="Kuratorium" className="logo" />
-            <p>A project-based record label, initiated and operated by Lennart Wiehe and associates.</p>
-            
+            <h1>A project-based record label, initiated and operated by Lennart Wiehe and associates.</h1>
+
+            <a href="mailto:hallo@kuratorium.net">hallo@kuratorium.net</a>            
         </div>
     )
 }

@@ -4,6 +4,7 @@ import './App.scss';
 import Dates from './Components/Dates';
 import Intro from './Components/Intro';
 import Releases from './Components/Releases'
+import About from './Components/About'
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
       <div>
         <Intro />
       </div>
-      <div>second</div>
+      <div>
+        <About />
+      </div>
       <div>
         <Releases />
       </div>

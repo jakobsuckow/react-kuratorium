@@ -1,4 +1,6 @@
 $bg-c: #cc6f57;
+$break-small: 600px;
+$break-large: 1200px;
 
 @font-face {
 	font-family: "Prophet";
@@ -8,6 +10,8 @@ $bg-c: #cc6f57;
   margin: 0;
   padding: 0;
 }
+
+
 
 
 html {
@@ -20,6 +24,10 @@ body {
 	width: 100%;
 	background-color: $bg-c;
 	font-size: 1.2rem
+}
+
+p {
+	font-size: 1.1em;
 }
 
 a,
@@ -60,20 +68,46 @@ ul {
 .row {
     display: grid;
     grid-template-columns: 33.333% 1fr 1fr 1fr;
-    height: 100vh;
+	height: 100vh;
+	
+	@media screen and (max-width: $break-small) {
+		display: grid;
+		grid-template-columns: 100% 50% 50% 100%;
+	}
 }
 
 .row > div {
   overflow-y: scroll;
   padding: 0 15px;
+
+  @media screen and (max-width: $break-small) {
+	  overflow-y: auto;
+  }
 }
 
 
 .welcome {
   margin-top: 40%;
 	padding-left: 18px;
-  vertical-align: middle
+  vertical-align: middle;
+  max-width: 320px;
   
+}
+
+.welcome h1 {
+	font-size: 1.1em;
+	font-weight: 200;
+	font-style: normal;
+	@media screen and (max-width: $break-small) {
+		position: absolute;
+		top: 10%;
+		display: block;
+		font-style: normal;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		margin-left: 0;
+		margin-right: 0;
+	  }
 }
 
 .welcome span {
@@ -94,6 +128,17 @@ img.logo, p {
 .event {
   margin-bottom: 6px;
 }
+
+
+// About seciont
+
+.about {
+	p {
+		margin-bottom: 10px;
+		font-size: 1.1em;
+	}
+}
+
 
 
 /* Animations: */
