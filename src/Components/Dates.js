@@ -20,7 +20,9 @@ const Dates = () => {
     }
 
     return (
+        
         <div>
+            <h1>Dates</h1>
             {isLoading ? (
                 <div>Loading Dates... <div className="rotate">|</div></div>
             ) : (

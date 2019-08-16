@@ -5,7 +5,8 @@ import React from 'react'
 const Releases = () => {
     return (
         <div>
-            <h1>track</h1>
+            <h1>Projects</h1>
+            <p>asdasdasdasdasdasdasdsdasda</p>
         </div>
     )
 }
