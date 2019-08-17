@@ -9,16 +9,16 @@ import About from './Components/About'
 function App() {
   return (
     <div className="row">
-      <div>
+      <div className="intro">
         <Intro />
       </div>
-      <div>
+      <div className="about">
         <About />
       </div>
-      <div>
+      <div className="releases">
         <Releases />
       </div>
-      <div>
+      <div className="dates">
         <Dates />
 
       </div>
