@@ -27,7 +27,7 @@ const Dates = () => {
                 <div>Loading Dates... <div className="rotate">|</div></div>
             ) : (
                 <>
-                {dates.map(date => (
+                {dates.slice(0,10).map(date => (
                 <ul key={date.date} className="event">
                 <li><p>{date.date}</p></li>
                 <li><p>{date.club}</p></li>
