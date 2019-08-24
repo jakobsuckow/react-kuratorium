@@ -79,20 +79,18 @@ ul {
 .row {
 	display: grid;
 	width: 100vw;
-	column-count: 1;
 	grid-template-columns: 33.333% 1fr 1fr 1fr;
 	grid-template-areas: "intro about releases dates";
 	grid-template-rows: 100%;
 	height: 100vh;
 	
 	@media screen and (max-width: $break-small) {
-		grid-template-columns: 100% 50% 50% 100%;
-		grid-template-rows: 100px 100px 100px;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 100% 100% 100%;
 		grid-template-areas: 
-							"intro"
-							"about"
+							"intro intro"
+							"about about"
 							"releases dates";
-		grid-template-rows: 100%;
 	}
 }
 
