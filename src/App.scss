@@ -111,6 +111,12 @@ ul {
 	grid-area: about;
 }
 .row > .releases {
+
+	img {
+		max-width: 100%;
+		
+	}
+
 	grid-area: releases;
 }
 .row > .dates {
