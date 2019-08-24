@@ -1,7 +1,11 @@
+// Variables
+
 $bg-c: #cc6f57;
 $c2: #4366CC;
 $break-small: 600px;
 $break-large: 1200px;
+
+// Basics
 
 @font-face {
 	font-family: "Prophet";
@@ -168,6 +172,7 @@ ul {
 .rotate {
 	animation: rotation 1s infinite linear;
 	text-align: center;
+	
 }
 
 img.logo {
@@ -196,6 +201,7 @@ img.logo {
 .loading::after {
 	content: "|";
 	animation: rotation 1s infinite linear;
+	display: inline-block;
 	text-align: center;
 }
 
