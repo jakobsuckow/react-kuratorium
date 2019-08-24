@@ -16,7 +16,7 @@ const Dates = () => {
         const response = await fetch('https://api.sheety.co/b28ce0df-7339-48f5-8093-41b2f47d2a08');
         const data = await response.json();
         setDates(data);
-        setIsLoading(false);
+        // setIsLoading(false);
     }
 
     return (
@@ -24,7 +24,7 @@ const Dates = () => {
         <div>
             <h1>Dates</h1>
             {isLoading ? (
-                <div>Loading Dates... <div className="rotate">|</div></div>
+                <div className="loading">Loading Dates...</div>
             ) : (
                 <>
                 {dates.slice(0,10).map(date => (

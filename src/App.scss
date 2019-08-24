@@ -74,7 +74,7 @@ ul {
 }
 
 
-
+// Grid options
 
 .row {
 	display: grid;
@@ -121,7 +121,10 @@ ul {
 }
 .row > .dates {
 	grid-area: dates;
+	
 }
+
+// Welcome Screen
 
 .welcome {
   margin-top: 40%;
@@ -161,7 +164,7 @@ ul {
 .email {
 	margin-top: 100px;
 }
-
+// Intro 
 .rotate {
 	animation: rotation 1s infinite linear;
 	text-align: center;
@@ -186,6 +189,14 @@ img.logo {
 		line-height: 1.5em;
 		text-align: justify
 	}
+}
+
+
+// Dates:
+.loading::after {
+	content: "|";
+	animation: rotation 1s infinite linear;
+	text-align: center;
 }
 
 
