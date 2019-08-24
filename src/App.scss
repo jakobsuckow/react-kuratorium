@@ -119,9 +119,13 @@ ul {
 
 .welcome {
   margin-top: 40%;
-	padding-left: 18px;
+  padding-left: 18px;
   vertical-align: middle;
   max-width: 320px;
+
+  @media screen and (max-width: $break-small) {
+	  padding: 0;
+  }
   
 }
 
@@ -157,7 +161,7 @@ ul {
 	text-align: center;
 }
 
-img.logo, p {
+img.logo {
   max-width: 320px;
 }
 
