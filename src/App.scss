@@ -91,6 +91,7 @@ ul {
 	grid-template-areas: "intro about releases dates card";
 	grid-template-rows: 100%;
 	height: 100vh;
+	animation: slide-in .3s ease-out;
 	
 	@media screen and (max-width: $break-small) {
 		grid-template-columns: 50% 50%;
@@ -133,63 +134,19 @@ ul {
 }
 .row > .card {
 	grid-area: card;
-	transform: translateX(-100%);
 	display: none;
 }
 
 
 // Grid shifted:
 
-.row__shifted {
-	display: grid;
-	width: 100vw;
-	grid-template-columns: 0 1fr 1fr 33.333%;
+.row.shifted {
 	grid-template-areas: "intro about releases dates card";
-	grid-template-rows: 100%;
-	height: 100vh;
-	
-	@media screen and (max-width: $break-small) {
-		grid-template-columns: 50% 50%;
-		grid-template-rows: 100% 100% 100%;
-		grid-template-areas: 
-							"intro intro"
-							"about about"
-							"releases dates";
-	}
+	grid-template-columns: 0 1fr 1fr 1fr 33.333%;
+
 }
-
-
-.row__shifted > div {
-  overflow-y: scroll;
-  padding: 0 15px;
-
-  @media screen and (max-width: $break-small) {
-	  overflow-y: auto;
-  }
-}
-
-.row__shifted > .intro {
-	grid-area: intro;
-	transform: translateX(-100%);
-	display: none;
-}
-.row__shifted > .about {
-	grid-area: about;
-}
-.row__shifted > .releases {
-
-	img {
-		max-width: 100%;
-		
-	}
-
-	grid-area: releases;
-}
-.row__shifted > .dates {
-	grid-area: dates;
-	display: block;
-	transform: translateX(100%);
-	
+.row.shifted > .card {
+	display: grid;
 }
 
 
@@ -274,7 +231,11 @@ img.logo {
 
 /* Animations: */
 
-
+@keyframes resize {
+	to {
+		grid-template-columns: 0 1fr 1fr 1fr 33.333%;
+	  }
+}
 
 @keyframes rotation {
 	from {

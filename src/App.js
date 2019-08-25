@@ -13,7 +13,7 @@ function App() {
     state ? setState(false) : setState(true);
   }
   return (
-    <div className={`${state ? 'row' : 'row__shifted' }`}>
+    <div className={`row ${state ? '' : 'shifted' }`}>
       <div className="intro">
         <Intro />
       </div>
