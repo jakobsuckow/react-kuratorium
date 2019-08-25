@@ -24,7 +24,7 @@ const Dates = () => {
         <>
             <h1>Dates</h1>
             {isLoading ? (
-                <div className="loading">Loading Dates...</div>
+                <div className="loading">Loading Dates... &nbsp;</div>
             ) : (
                 <>
                 {dates.slice(0,8).map(date => (
