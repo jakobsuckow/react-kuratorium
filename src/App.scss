@@ -91,7 +91,6 @@ ul {
 	grid-template-areas: "intro about releases dates card";
 	grid-template-rows: 100%;
 	height: 100vh;
-	animation: slide-in .3s ease-out;
 	
 	@media screen and (max-width: $break-small) {
 		grid-template-columns: 50% 50%;
