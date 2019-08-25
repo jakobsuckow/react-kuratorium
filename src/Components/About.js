@@ -1,4 +1,5 @@
 import React from 'react'
+import Form from './Form'
 
 const About = () => {
     return (
@@ -17,6 +18,7 @@ const About = () => {
             the abilities to inspire a whole wave of artists; individuals with a vision to share, not a
             taste to show off. 
             </p> 
+            <Form />
             <p>
             Kuratorium operates on a project-basis, reducing the urge to release music for the sake of releasing
              something and giving a platform to those who will do something special with it.
