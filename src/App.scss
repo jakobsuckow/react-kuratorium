@@ -85,21 +85,11 @@ ul {
 // Grid options
 
 .row {
-	display: grid;
+	display: flex;
 	width: 100vw;
-	grid-template-columns: 33.333% 1fr 1fr 1fr 0;
-	grid-template-areas: "intro about releases dates card";
-	grid-template-rows: 100%;
+
 	height: 100vh;
-	
-	@media screen and (max-width: $break-small) {
-		grid-template-columns: 50% 50%;
-		grid-template-rows: 100% 100% 100%;
-		grid-template-areas: 
-							"intro intro"
-							"about about"
-							"releases dates";
-	}
+
 }
 
 
@@ -113,40 +103,46 @@ ul {
 }
 
 .row > .intro {
-	grid-area: intro;
+	flex: 0 0 33.333%;
 }
 .row > .about {
-	grid-area: about;
+	flex: 1;
 }
 .row > .releases {
-
+	flex: 1;
 	img {
 		max-width: 100%;
 		
 	}
 
-	grid-area: releases;
 }
 .row > .dates {
-	grid-area: dates;
+	flex: 1;
 	
 }
 .row > .card {
-	grid-area: card;
 	display: none;
+	flex: 0;
+	opacity: 0;
 }
 
 
 // Grid shifted:
 
 .row.shifted {
-	grid-template-areas: "intro about releases dates card";
-	grid-template-columns: 0 1fr 1fr 1fr 33.333%;
-
+	display: flex;
 }
 .row.shifted > .card {
-	display: grid;
+	display: flex;
+	opacity: 1;
+	flex: 0 0 33.333%;
 }
+.row.shifted > .intro {
+	flex: 0;
+	display: none;
+}
+
+
 
 
 // Welcome Screen
