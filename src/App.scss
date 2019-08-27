@@ -170,7 +170,11 @@ ul {
 	flex-basis: 0;
 }
 
-
+button.btn__open__card {
+	@media screen and (max-width: $break-small) {
+		display: none;
+	}
+}
 
 
 // Welcome Screen

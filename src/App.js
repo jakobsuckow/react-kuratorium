@@ -19,7 +19,7 @@ function App() {
       </div>
       <div className="about">
         <About />
-        <button onClick={toggle}>Open Card</button>
+        <button onClick={toggle} className="btn__open__card">Open Card</button>
       </div>
       <div className="releases">
         <Releases />
