@@ -16,7 +16,7 @@ export default function Form() {
             })}/>
         {errors.email && 'Email address wrong.'}
         <input type="submit" name="submit" />
-
         </form>
+       
     )
 }

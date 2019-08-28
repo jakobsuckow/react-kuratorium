@@ -3,8 +3,12 @@ import React from 'react'
 
 
 const Releases = () => {
+
+
     return (
+
         <>
+
             <h1>Projects</h1>
             <p></p>
             <div className="release">

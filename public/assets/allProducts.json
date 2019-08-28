@@ -1,0 +1,49 @@
+{
+    "object": "list",
+    "data": [
+        {
+            "id": "sku_FcLUJZMLU7xKI6",
+            "object": "sku",
+            "active": true,
+            "attributes": {
+                "name": "Freedom In My Pocket"
+            },
+            "created": 1565728857,
+            "currency": "eur",
+            "image": "https://files.stripe.com/links/fl_test_pl6R2lB98jdcdjaHxTwm3H9d",
+            "inventory": {
+                "quantity": null,
+                "type": "infinite",
+                "value": null
+            },
+            "livemode": false,
+            "metadata": {},
+            "package_dimensions": null,
+            "price": 20000,
+            "product": "prod_FcLUat0KEquD03",
+            "updated": 1565728857
+        },
+        {
+            "id": "sku_FEH4P2ELxc0age",
+            "object": "sku",
+            "active": true,
+            "attributes": {},
+            "created": 1560177044,
+            "currency": "eur",
+            "image": "https://cdn.shopify.com/s/files/1/0207/1868/2212/products/tz1_6c593283-d3bc-44a8-8400-324fd2eb9b31_1080x.jpg?v=1558646359",
+            "inventory": {
+                "quantity": 20,
+                "type": "finite",
+                "value": null
+            },
+            "livemode": false,
+            "metadata": {},
+            "package_dimensions": null,
+            "price": 27000,
+            "product": "toby-zeng-ca987-i",
+            "updated": 1560177044
+        }
+    ],
+    "has_more": false,
+    "url": "/v1/skus"
+}
