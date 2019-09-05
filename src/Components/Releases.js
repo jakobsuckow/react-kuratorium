@@ -1,28 +1,28 @@
 import React from 'react'
-
+import AudioPlayer from "react-h5-audio-player"
+import {Product} from './Product'
+import {database} from './database'
 
 
 const Releases = () => {
-
-
     return (
-
         <>
-
-            <h1>Projects</h1>
-            <p></p>
-            <div className="release">
-                <p>Schleifen001</p>
-                <img src="assets/schleifen_release1.jpg" alt="release 1" />
-            </div>
-            <div className="release">
-                <p>Schleifen002</p>
-                <img src="assets/schleifen_release2.jpg" alt="release 3" />
-            </div>
-            <div className="release">
-                <p>Schleifen003</p>
-                <img src="assets/schleifen_release3.jpg" alt="release 2" />
-            </div>
+            {database.map(item => (
+                <Product
+                name={item.name}
+                price={item.price}
+                key={item.id}
+                img={item.img}
+                desc={item.desc}
+                />
+            ))}
+            <AudioPlayer
+            controls
+            autoPlay
+            src="http://localhost:3000/assets/perfectGirl.mp3"
+            onPlay={e => console.log("onPlay")}
+            // other props here
+            />
         </>
     )
 }

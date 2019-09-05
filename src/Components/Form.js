@@ -9,7 +9,7 @@ export default function Form() {
     return (
 
         <form onSubmit={handleSubmit(onSubmit)}>
-        <label for="email">Email Address:</label>
+        <label htmlFor="email">Email Address:</label>
         <input name="email" ref={register({
             required: true,
             pattern: /^\S+@\S+$/i

@@ -141,6 +141,22 @@ ul {
 	
 }
 
+//  Description:
+.product__desc {
+	display: flex; 
+	
+}
+
+
+.add__cart {
+	display: flex;
+	border: none;
+	cursor: pointer;
+	text-decoration: underline;
+	font-size: 1.1em;
+	
+}
+
 // Welcome Screen
 
 .welcome {
@@ -198,7 +214,7 @@ img.logo {
 }
 
 
-// About seciont
+// About Section
 
 .about {
 	p {
@@ -221,6 +237,7 @@ img.logo {
 
 
 /* Animations: */
+
 
 
 
