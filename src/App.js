@@ -7,8 +7,9 @@ import Releases from './Components/Releases'
 import About from './Components/About'
 
 function App() {
+  const introWidth = document.getElementsByClassName('.intro').innerWidth;
+  console.log(introWidth)
   const [state, setState] = useState(true);
-
   function toggle() {
     state ? setState(false) : setState(true);
   }

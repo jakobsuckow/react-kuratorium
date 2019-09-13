@@ -1,5 +1,4 @@
 import React from 'react'
-import AudioPlayer from "react-h5-audio-player"
 import {Product} from './Product'
 import {database} from './database'
 
@@ -16,13 +15,6 @@ const Releases = () => {
                 desc={item.desc}
                 />
             ))}
-            <AudioPlayer
-            controls
-            autoPlay
-            src="http://localhost:3000/assets/perfectGirl.mp3"
-            onPlay={e => console.log("onPlay")}
-            // other props here
-            />
         </>
     )
 }

@@ -17,6 +17,7 @@ const Dates = () => {
         const data = await response.json();
         setDates(data);
         setIsLoading(false);
+        console.table(data)
     }
 
     return (
