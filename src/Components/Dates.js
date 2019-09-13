@@ -27,8 +27,8 @@ const Dates = () => {
                 <div className="loading">Loading Dates... &nbsp;</div>
             ) : (
                 <>
-                {dates.slice(0,8).map(date => (
-                <ul key={date.date} className="event">
+                {dates.slice(0,8).map((date, index) => (
+                <ul key={index} className="event">
                 <li><p>{date.date}</p></li>
                 <li><p>{date.club}</p></li>
                 <li><p>{date.city}</p></li>
