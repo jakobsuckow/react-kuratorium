@@ -94,14 +94,14 @@ ul {
 // Grid options
 
 .row {
-	display: grid;
+	display: flex;
 	width: 100vw;
-	grid-template-columns: 33.333% 1fr 1fr 1fr;
-	grid-template-areas: "intro about releases dates";
-	grid-template-rows: 100%;
+
 	height: 100vh;
-	
+
 	@media screen and (max-width: $break-small) {
+		height: 100vh;
+		display: grid;
 		grid-template-columns: 50% 50%;
 		grid-template-rows: 100% 100% 100%;
 		grid-template-areas: 
@@ -109,37 +109,82 @@ ul {
 							"about about"
 							"releases dates";
 	}
+
 }
 
 
 .row > div {
   overflow-y: scroll;
   padding: 0 15px;
+  transition: all 2s;
 
   @media screen and (max-width: $break-small) {
+	  display: grid;
 	  overflow-y: auto;
   }
 }
 
 .row > .intro {
-	grid-area: intro;
+	flex: 0 0 33.333%;
+
+	@media screen and (max-width: $break-small) {
+		grid-area: intro;
+	}
+	
 }
 .row > .about {
-	grid-area: about;
+	flex: 1;
+	@media screen and (max-width: $break-small) {
+		grid-area: about;
+	}
 }
 .row > .releases {
+	flex: 1;
+
+	@media screen and (max-width: $break-small) {
+		grid-area: releases;
+	}
 
 	img {
 		max-width: 100%;
 		
 	}
 
-	grid-area: releases;
 }
 .row > .dates {
-	grid-area: dates;
+	flex: 1;
+
+	@media screen and (max-width: $break-small) {
+		grid-area: dates;
+	}
 	
 }
+.row > .card {
+	display: none;
+	flex: 0;
+	opacity: 0;
+}
+
+
+// Grid shifted:
+
+.row.shifted {
+	display: flex;
+}
+.row.shifted > .card {
+	transition: all 2s;
+	flex: 0 0 33.333%;
+}
+.row.shifted > .intro {
+	flex-basis: 0;
+}
+
+button.btn__open__card {
+	@media screen and (max-width: $break-small) {
+		display: none;
+	}
+}
+
 
 //  Description:
 .product__desc {
@@ -238,7 +283,11 @@ img.logo {
 
 /* Animations: */
 
-
+@keyframes resize {
+	to {
+		grid-template-columns: 0 1fr 1fr 1fr 33.333%;
+	  }
+}
 
 
 @keyframes rotation {

@@ -7,7 +7,6 @@ export default function Form() {
     const onSubmit = data => {console.log(data)}
 
     return (
-
         <form onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="email">Email Address:</label>
         <input name="email" ref={register({

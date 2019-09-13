@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.scss';
 // Import Slides
 import Dates from './Components/Dates';
@@ -7,13 +7,19 @@ import Releases from './Components/Releases'
 import About from './Components/About'
 
 function App() {
+  const [state, setState] = useState(true);
+
+  function toggle() {
+    state ? setState(false) : setState(true);
+  }
   return (
-    <div className="row">
+    <div className={`row ${state ? '' : 'shifted' }`}>
       <div className="intro">
         <Intro />
       </div>
       <div className="about">
         <About />
+        <button onClick={toggle} className="btn__open__card">Open Card</button>
       </div>
       <div className="releases">
         <Releases />
@@ -21,6 +27,9 @@ function App() {
       <div className="dates">
         <Dates />
 
+      </div>
+      <div className="card">
+        <h1>hi</h1>
       </div>
     </div>
   );
