@@ -5,7 +5,7 @@ import {database} from './database'
 
 const Releases = () => {
     return (
-        <>  <h1>Releases</h1>
+        <>  <h1>Projects</h1>
             {database.map(item => (
                 <Product
                 name={item.name}

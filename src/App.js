@@ -1,14 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState} from 'react'
 import './App.scss';
 // Import Slides
-import Dates from './Components/Dates';
 import Intro from './Components/Intro';
-import Releases from './Components/Releases'
 import About from './Components/About'
+import Projects from './Components/Projects'
+import Feed from './Components/Feed'
+
 
 function App() {
-  const introWidth = document.getElementsByClassName('.intro').innerWidth;
-  console.log(introWidth)
   const [state, setState] = useState(true);
   function toggle() {
     state ? setState(false) : setState(true);
@@ -20,13 +19,12 @@ function App() {
       </div>
       <div className="about">
         <About />
-        <button onClick={toggle} className="btn__open__card">Open Card</button>
       </div>
-      <div className="releases">
-        <Releases />
+      <div className="projects">
+        <Projects />
       </div>
-      <div className="dates">
-        <Dates />
+      <div className="feed">
+        <Feed />
 
       </div>
       <div className="card">

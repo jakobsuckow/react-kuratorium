@@ -23,7 +23,7 @@ const Dates = () => {
     return (
         
         <>
-            <h1>Dates</h1>
+            <h1>Feed</h1>
             {isLoading ? (
                 <div className="loading">Loading Dates... &nbsp;</div>
             ) : (

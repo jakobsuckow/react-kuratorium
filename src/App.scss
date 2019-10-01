@@ -107,7 +107,7 @@ ul {
 		grid-template-areas: 
 							"intro intro"
 							"about about"
-							"releases dates";
+							"projects feed";
 	}
 
 }
@@ -138,11 +138,11 @@ ul {
 		grid-area: about;
 	}
 }
-.row > .releases {
+.row > .projects {
 	flex: 1;
 
 	@media screen and (max-width: $break-small) {
-		grid-area: releases;
+		grid-area: projects;
 	}
 
 	img {
@@ -151,11 +151,11 @@ ul {
 	}
 
 }
-.row > .dates {
+.row > .feed {
 	flex: 1;
 
 	@media screen and (max-width: $break-small) {
-		grid-area: dates;
+		grid-area: feed;
 	}
 	
 }
@@ -271,7 +271,7 @@ img.logo {
 }
 
 
-// Dates:
+// feed:
 .loading::after {
 	content: "|";
 	animation: rotation 1s infinite linear;
