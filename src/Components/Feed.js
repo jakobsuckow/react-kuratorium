@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 
-
 const Dates = () => {
 
     const [dates, setDates] = useState([]);
@@ -13,11 +12,11 @@ const Dates = () => {
 
     const getDates = async() => {
         setIsLoading(true);
-        const response = await fetch('https://api.sheety.co/b28ce0df-7339-48f5-8093-41b2f47d2a08');
+        const response = await fetch('https://api.airtable.com/v0/appemKlsSSYmto60q/Events?api_key=keycZExl0AEV9g3vb');
         const data = await response.json();
-        setDates(data);
+        setDates(data.records);
         setIsLoading(false);
-        console.table(data)
+        console.table(data.records)
     }
 
     return (
@@ -28,14 +27,15 @@ const Dates = () => {
                 <div className="loading">Loading Dates... &nbsp;</div>
             ) : (
                 <>
-                {dates.slice(0,8).map((date, index) => (
-                <ul key={index} className="event">
-                <li><p>{date.date}</p></li>
-                <li><p>{date.club}</p></li>
-                <li><p>{date.city}</p></li>
-                <li><p>{date.artist}</p></li>
-                </ul>
-            ))}
+                 {dates.map(date => (
+                     <ul key={date.id} className="event">
+                         <li>{date.fields.Date}</li>
+                         <li>{date.fields.Name}</li>
+                         <li>{date.fields.Venue}</li>
+                         <li>{date.fields.City}</li>
+                         <li>{date.fields.Country}</li>
+                     </ul>
+                 ))}
                 </>
             )}
             

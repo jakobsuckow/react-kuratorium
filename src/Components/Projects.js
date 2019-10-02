@@ -1,21 +1,17 @@
 import React from 'react'
 import {Product} from './Product'
 import {database} from './database'
+import Form from '../Components/Form'
 
 
 const Releases = () => {
     return (
         <>  <h1>Projects</h1>
             <p>Kuratorium is a collection of independent projects...</p>
-            {database.map(item => (
-                <Product
-                name={item.name}
-                price={item.price}
-                key={item.id}
-                img={item.img}
-                desc={item.desc}
-                />
-            ))}
+            <br />
+            <p>if you would like to receive updates about future Kuratorium activities, send us your email here</p>
+            <br />
+            <Form />
         </>
     )
 }
