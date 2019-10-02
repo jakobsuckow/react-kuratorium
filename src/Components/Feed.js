@@ -3,26 +3,54 @@ import React, {useEffect, useState} from 'react';
 const Dates = () => {
 
     const [dates, setDates] = useState([]);
+    const [feed, setFeed] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
 
     useEffect(() => {
         getDates();
+        getFeed();
     }, [])
 
+    const getFeed = async() => {
+        setIsLoading(true);
+        const response = await fetch('https://api.airtable.com/v0/appemKlsSSYmto60q/Feed?api_key=keycZExl0AEV9g3vb')
+        const data = await response.json();
+        setFeed(data.records)
+        setIsLoading(false)
+
+    }
     const getDates = async() => {
         setIsLoading(true);
         const response = await fetch('https://api.airtable.com/v0/appemKlsSSYmto60q/Events?api_key=keycZExl0AEV9g3vb');
         const data = await response.json();
         setDates(data.records);
         setIsLoading(false);
-        console.table(data.records)
+
     }
 
     return (
         
         <>
             <h1>Feed</h1>
+            {isLoading ? (
+                <div className="loading">Loading Dates... &nbsp;</div>
+            ): (
+                <>
+                 {feed.map(f => (
+                     <ul key={f.id} className="event">
+                        <li>{f.fields.Date}</li>
+                        <li>{f.fields.Headline}</li>
+                        <li>
+                            <a href={f.fields.Link}>read more</a>
+                        </li>
+                     </ul>
+                 ))}
+                </>
+            )}
+
+
+            <h1>Events</h1>
             {isLoading ? (
                 <div className="loading">Loading Dates... &nbsp;</div>
             ) : (
