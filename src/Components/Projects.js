@@ -6,6 +6,7 @@ import {database} from './database'
 const Releases = () => {
     return (
         <>  <h1>Projects</h1>
+            <p>Kuratorium is a collection of independent projects...</p>
             {database.map(item => (
                 <Product
                 name={item.name}
