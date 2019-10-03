@@ -1,6 +1,5 @@
 import React from 'react'
 import './App.scss';
-// Import Slides
 import Intro from './Components/Intro';
 import About from './Components/About'
 import Projects from './Components/Projects'
