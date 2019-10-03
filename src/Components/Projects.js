@@ -1,6 +1,4 @@
 import React from 'react'
-import {Product} from './Product'
-import {database} from './database'
 import Form from '../Components/Form'
 
 

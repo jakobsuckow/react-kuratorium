@@ -6,7 +6,6 @@ const Dates = () => {
     const [feed, setFeed] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
-
     useEffect(() => {
         getDates();
         getFeed();
@@ -18,7 +17,6 @@ const Dates = () => {
         const data = await response.json();
         setFeed(data.records)
         setIsLoading(false)
-
     }
     const getDates = async() => {
         setIsLoading(true);
@@ -26,7 +24,6 @@ const Dates = () => {
         const data = await response.json();
         setDates(data.records);
         setIsLoading(false);
-
     }
 
     return (
@@ -34,7 +31,7 @@ const Dates = () => {
         <>
             <h1>Feed</h1>
             {isLoading ? (
-                <div className="loading">Loading Dates... &nbsp;</div>
+                <div className="loading">Loading Feed... &nbsp;</div>
             ): (
                 <>
                  {feed.map(f => (

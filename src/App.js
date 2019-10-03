@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './App.scss';
 // Import Slides
 import Intro from './Components/Intro';
@@ -8,12 +8,8 @@ import Feed from './Components/Feed'
 
 
 function App() {
-  const [state, setState] = useState(true);
-  function toggle() {
-    state ? setState(false) : setState(true);
-  }
   return (
-    <div className={`row ${state ? '' : 'shifted' }`}>
+    <div className="row">
       <div className="intro">
         <Intro />
       </div>
