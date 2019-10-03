@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {feedBaseUrl, datesBaseUrl} from './airtableApi'
+import {feedUrl, datesUrl} from './airtableApi'
 
 const Dates = () => {
 
@@ -14,14 +14,14 @@ const Dates = () => {
 
     const getFeed = async() => {
         setIsLoading(true);
-        const response = await fetch(feedBaseUrl)
+        const response = await fetch(feedUrl)
         const data = await response.json();
         setFeed(data.records)
         setIsLoading(false)
     }
     const getDates = async() => {
         setIsLoading(true);
-        const response = await fetch(datesBaseUrl);
+        const response = await fetch(datesUrl);
         const data = await response.json();
         setDates(data.records);
         setIsLoading(false);
