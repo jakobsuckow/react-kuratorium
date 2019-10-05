@@ -3,11 +3,11 @@ import useForm from 'react-hook-form';
 
 
 export default function Form() {
-    const {register, handleSubmit, errors} = useForm();
-    const onSubmit = data => {console.log(data)}
+    const {register, errors} = useForm();
+
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form data-netlify="true">
         <label htmlFor="email">Email Address:</label>
         <input name="email" ref={register({
             required: true,
