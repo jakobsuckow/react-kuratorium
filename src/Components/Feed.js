@@ -57,21 +57,18 @@ const Dates = () => {
                 <>
                  {dates.map(date => (
                      <ul key={date.id} className="event">
-                         <li>{date.fields.Date}</li>
+                         <li className="date">{date.fields.Date}</li>
                          <li>{date.fields.Name}</li>
                          <li>{date.fields.Venue}</li>
                          <li>{date.fields.City}</li>
                          <li>{date.fields.Country}</li>
                          <li>{date.fields.MusicBy}</li>
-                         {date.fields.Artwork ? (
-                             <img 
-                             src={date.fields.Artwork[0].thumbnails.large.url} 
-                             alt={date.fields.Name} 
-                             />
-                         ): (
-                             <div></div>
-                         )}
-                         
+                         {date.fields.Artwork &&
+                        <img src={date.fields.Artwork[0].thumbnails.large.url}
+                        alt={date.fields.Name} 
+                        />
+                        }
+            
                      </ul>
                  ))}
                 </>
