@@ -132,6 +132,7 @@ ul {
 	}
 	
 }
+
 .row > .about {
 	flex: 1;
 	@media screen and (max-width: $break-small) {
@@ -157,8 +158,14 @@ ul {
 	@media screen and (max-width: $break-small) {
 		grid-area: feed;
 	}
+	img {
+		width: 100%;
+		position: relative;
+	}
 	
 }
+
+
 .row > .card {
 	display: none;
 	flex: 0;

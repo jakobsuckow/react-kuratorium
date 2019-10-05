@@ -18,6 +18,7 @@ const Dates = () => {
         const data = await response.json();
         setFeed(data.records)
         setIsLoading(false)
+
     }
     const getDates = async() => {
         setIsLoading(true);
@@ -25,9 +26,8 @@ const Dates = () => {
         const data = await response.json();
         setDates(data.records);
         setIsLoading(false);
-        console.log(data.records[3].fields.Artwork[0].thumbnails.large.url)
+        console.log(data.records)
     }
-
     return (
         
         <>
@@ -42,6 +42,7 @@ const Dates = () => {
                         <li>{f.fields.Headline}</li>
                         <li>
                             <a href={f.fields.Link}>read more</a>
+                            
                         </li>
                      </ul>
                  ))}
@@ -54,7 +55,7 @@ const Dates = () => {
                 <div className="loading">Loading Dates... &nbsp;</div>
             ) : (
                 <>
-                 {dates.map((date, i) => (
+                 {dates.map(date => (
                      <ul key={date.id} className="event">
                          <li>{date.fields.Date}</li>
                          <li>{date.fields.Name}</li>
@@ -62,8 +63,15 @@ const Dates = () => {
                          <li>{date.fields.City}</li>
                          <li>{date.fields.Country}</li>
                          <li>{date.fields.MusicBy}</li>
-
-
+                         {date.fields.Artwork ? (
+                             <img 
+                             src={date.fields.Artwork[0].thumbnails.large.url} 
+                             alt={date.fields.Name} 
+                             />
+                         ): (
+                             <div></div>
+                         )}
+                         
                      </ul>
                  ))}
                 </>
