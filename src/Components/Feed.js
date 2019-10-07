@@ -68,6 +68,9 @@ const Dates = () => {
                         alt={date.fields.Name} 
                         />
                         }
+                        {date.fields.Link && 
+                        <a href={date.fields.Link}>Go to Event</a>
+                        }
             
                      </ul>
                  ))}
