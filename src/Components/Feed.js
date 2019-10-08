@@ -64,14 +64,18 @@ const Dates = () => {
                          <li>{date.fields.Country}</li>
                          <li>{date.fields.MusicBy}</li>
                          {date.fields.Artwork &&
+                        
+                       <div className="hoverImage">
                         <img src={date.fields.Artwork[0].thumbnails.large.url}
-                        alt={date.fields.Name} 
+                        alt={date.fields.Name}
+
                         />
+                        </div>
                         }
+                        
                         {date.fields.Link && 
                         <a href={date.fields.Link}>Go to Event</a>
                         }
-            
                      </ul>
                  ))}
                 </>
