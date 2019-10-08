@@ -286,11 +286,13 @@ img.logo {
 }
 
 .event img {
+	display: none;
 	visibility: hidden;
 
 }
 
 .event:hover img {
+	display: block;
 	visibility: visible;
 }
 
