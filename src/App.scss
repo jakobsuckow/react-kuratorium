@@ -212,6 +212,10 @@ button.btn__open__card {
 	
 }
 
+
+
+
+
 // Welcome Screen
 
 .welcome {
@@ -266,7 +270,33 @@ img.logo {
 
 .event {
   margin-bottom: 6px;
+  cursor: pointer;
+
+
 }
+
+.hoverImage {
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	max-width: 20%;
+
+}
+
+.event img {
+	visibility: hidden;
+
+}
+
+.event:hover img {
+	visibility: visible;
+}
+
+.date {
+	margin-bottom: 6px;
+  }
 
 
 // About Section

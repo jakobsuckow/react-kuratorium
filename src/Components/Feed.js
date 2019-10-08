@@ -37,7 +37,7 @@ const Dates = () => {
             ): (
                 <>
                  {feed.map(f => (
-                     <ul key={f.id} className="event">
+                     <ul key={f.id} className="date">
                         <li>{f.fields.Date}</li>
                         <li>{f.fields.Headline}</li>
                         <li>
@@ -55,7 +55,7 @@ const Dates = () => {
                 <div className="loading">Loading Dates... &nbsp;</div>
             ) : (
                 <>
-                 {dates.map(date => (
+                 {dates.map((date) => (
                      <ul key={date.id} className="event">
                          <li className="date">{date.fields.Date}</li>
                          <li>{date.fields.Name}</li>
@@ -63,12 +63,10 @@ const Dates = () => {
                          <li>{date.fields.City}</li>
                          <li>{date.fields.Country}</li>
                          <li>{date.fields.MusicBy}</li>
-                         {date.fields.Artwork &&
-                        
+                         {date.fields.Artwork &&      
                        <div className="hoverImage">
                         <img src={date.fields.Artwork[0].thumbnails.large.url}
                         alt={date.fields.Name}
-
                         />
                         </div>
                         }
