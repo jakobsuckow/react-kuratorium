@@ -55,7 +55,7 @@ const Dates = () => {
                 <div className="loading">Loading Dates... &nbsp;</div>
             ) : (
                 <>
-                 {dates.map((date) => (
+                 {dates.map((date, index) => (
                      <ul key={date.id} className="event">
                          <li className="date">{date.fields.Date}</li>
                          <li>{date.fields.Name}</li>
@@ -66,7 +66,7 @@ const Dates = () => {
                          {date.fields.Artwork &&      
                        <div className="hoverImage">
                         <img src={date.fields.Artwork[0].thumbnails.large.url}
-                        alt={date.fields.Name} style={{zIndex: `10`}}
+                        alt={date.fields.Name} style={{zIndex: `${index}`}}
                         />
                         </div>
                         }
