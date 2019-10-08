@@ -66,7 +66,7 @@ const Dates = () => {
                          {date.fields.Artwork &&      
                        <div className="hoverImage">
                         <img src={date.fields.Artwork[0].thumbnails.large.url}
-                        alt={date.fields.Name}
+                        alt={date.fields.Name} style={{zIndex: `10`}}
                         />
                         </div>
                         }
