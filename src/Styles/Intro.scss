@@ -2,9 +2,11 @@
 
 .welcome {
     margin-top: 40%;
-    padding-left: 18px;
     vertical-align: middle;
-    max-width: 320px;
+    max-width: 330px;
+    height: 200px;
+    overflow: scroll;
+    text-align: justify;
   
     @media screen and (max-width: $break-small) {
         padding: 0;
@@ -16,7 +18,7 @@
       font-size: 1.1em;
       font-weight: 200;
       font-style: normal;
-      margin-bottom: 80px;
+      margin-bottom: 30px;
       @media screen and (max-width: $break-small) {
           position: absolute;
           top: 10%;
