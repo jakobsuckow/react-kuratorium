@@ -1,0 +1,81 @@
+@font-face {
+	font-family: "Prophet";
+	src: url("/assets/fonts/Prophet-Regular.otf") format("opentype")}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+	font-size: 62.5%
+}
+
+body {
+	font-family: "Prophet";
+	height: 100%;
+	width: 100%;
+	background-color: $bg-c;
+	font-size: 1.2rem
+}
+p {
+	font-size: 1.1em;
+}
+
+
+a,
+a:active,
+a:hover,
+a:visited {
+	color: #000
+}
+
+p, h1, h2, h3, ul {
+	cursor: default;
+}
+
+::selection {
+	background-color: $c2;
+}
+
+
+input,
+button {
+	border: 1px solid #000;
+	background: transparent;
+	border-radius: 0px;
+	padding: 1px 2px;
+	font-family: inherit;
+}
+
+form {
+	width: 100%;
+
+}
+
+label {
+	display: block;
+}
+
+input:focus {
+	outline: none;
+}
+
+select {
+	border: 1px solid #000;
+	-webkit-appearance: none;
+	border-radius: 0px;
+	background: transparent;
+	font-family: inherit
+}
+
+fieldset {
+	display: block
+}
+
+ul {
+	list-style: none
+}
+

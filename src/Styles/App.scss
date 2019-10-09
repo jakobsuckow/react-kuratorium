@@ -1,0 +1,143 @@
+// Variables
+
+$bg-c: #cc6f57;
+$c2: #4366CC;
+$break-small: 600px;
+$break-large: 1200px;
+
+
+
+.row {
+	display: flex;
+	width: 100vw;
+
+	height: 100vh;
+
+	@media screen and (max-width: $break-small) {
+		height: 100vh;
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 100% 100% 100%;
+		grid-template-areas: 
+							"intro intro"
+							"about about"
+							"projects feed";
+	}
+
+}
+
+
+.row > div {
+  overflow-y: scroll;
+  padding: 0 15px;
+  transition: all 2s;
+
+  @media screen and (max-width: $break-small) {
+	  overflow-y: auto;
+  }
+}
+
+.row > .intro {
+	flex: 0 0 33.333%;
+
+	@media screen and (max-width: $break-small) {
+		grid-area: intro;
+	}
+	
+}
+
+.row > .about {
+	flex: 1;
+	@media screen and (max-width: $break-small) {
+		grid-area: about;
+	}
+}
+.row > .projects {
+	flex: 1;
+
+	@media screen and (max-width: $break-small) {
+		grid-area: projects;
+	}
+
+	img {
+		max-width: 100%;
+		
+	}
+
+}
+.row > .feed {
+	flex: 1;
+
+	@media screen and (max-width: $break-small) {
+		grid-area: feed;
+	}
+	img {
+		width: 100%;
+		position: relative;
+	}
+
+	.date {
+		text-decoration: underline;
+	}
+	
+}
+
+
+.row > .card {
+	display: none;
+	flex: 0;
+	opacity: 0;
+}
+
+
+// Grid shifted:
+
+.row.shifted {
+	display: flex;
+}
+.row.shifted > .card {
+	transition: all 2s;
+	flex: 0 0 33.333%;
+}
+.row.shifted > .intro {
+	flex-basis: 0;
+}
+
+button.btn__open__card {
+	@media screen and (max-width: $break-small) {
+		display: none;
+	}
+}
+
+
+//  Description:
+.product__desc {
+	display: flex; 
+	
+}
+
+
+.add__cart {
+	display: flex;
+	border: none;
+	cursor: pointer;
+	text-decoration: underline;
+	font-size: 1.1em;
+	
+}
+
+
+
+
+// About Section
+
+.about {
+	p {
+		margin-bottom: 10px;
+		font-size: 1.1em;
+		line-height: 1.5em;
+		text-align: justify
+	}
+}
+
+
