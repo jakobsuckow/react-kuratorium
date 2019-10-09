@@ -22,9 +22,6 @@ function App() {
         <Feed />
 
       </div>
-      <div className="card">
-        <h1>hi</h1>
-      </div>
     </div>
   );
 }

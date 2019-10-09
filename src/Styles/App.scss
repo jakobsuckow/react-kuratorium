@@ -83,52 +83,6 @@ $break-large: 1200px;
 }
 
 
-.row > .card {
-	display: none;
-	flex: 0;
-	opacity: 0;
-}
-
-
-// Grid shifted:
-
-.row.shifted {
-	display: flex;
-}
-.row.shifted > .card {
-	transition: all 2s;
-	flex: 0 0 33.333%;
-}
-.row.shifted > .intro {
-	flex-basis: 0;
-}
-
-button.btn__open__card {
-	@media screen and (max-width: $break-small) {
-		display: none;
-	}
-}
-
-
-//  Description:
-.product__desc {
-	display: flex; 
-	
-}
-
-
-.add__cart {
-	display: flex;
-	border: none;
-	cursor: pointer;
-	text-decoration: underline;
-	font-size: 1.1em;
-	
-}
-
-
-
-
 // About Section
 
 .about {
