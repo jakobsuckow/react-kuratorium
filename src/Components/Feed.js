@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {feedUrl, datesUrl} from './airtableApi'
 
 const Dates = () => {
 
+    const feedUrl = `https://cadillac33.netlify.com/.netlify/functions/getFeed`
+    const datesUrl = `https://cadillac33.netlify.com/.netlify/functions/getDates`
     const [dates, setDates] = useState([]);
     const [feed, setFeed] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
