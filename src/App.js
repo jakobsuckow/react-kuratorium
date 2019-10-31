@@ -1,10 +1,9 @@
-import React from 'react'
-import '../src/Styles/Index.scss';
-import Intro from './Components/Intro';
-import About from './Components/About'
-import Projects from './Components/Projects'
-import Feed from './Components/Feed'
-
+import React from "react";
+import "../src/Styles/Index.scss";
+import Intro from "./Components/Intro";
+import About from "./Components/About";
+import Projects from "./Components/Projects";
+import Feed from "./Components/Feed";
 
 function App() {
   return (
@@ -20,7 +19,6 @@ function App() {
       </div>
       <div className="feed">
         <Feed />
-
       </div>
     </div>
   );
