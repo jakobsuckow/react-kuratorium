@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../Assets/kuratorium.png";
+import logo from "../Assets/kuratorium_raw.png";
 
 const Intro = () => {
   return (
@@ -29,7 +29,7 @@ const Intro = () => {
       <br />
       <p>Privacy Policy: </p>
       <p>
-        Kuratorium | Schleifen Musikverlag, ℅ L. Wiehe, Saarbrücker Str. 14,
+        Kuratorium | Schleifen Musikverlag, L. Wiehe, Saarbrücker Str. 14,
         10405 Berlin (hereinafter “we”, “us” and “our”) runs this website and
         therefore processes personal data pursuant to the EU General Data
         Protection Regulation (“GDPR”). You may reach out to us via e-mail:
