@@ -29,8 +29,8 @@ const Intro = () => {
       <br />
       <p>Privacy Policy: </p>
       <p>
-        Kuratorium | Schleifen Musikverlag, L. Wiehe, Saarbrücker Str. 14,
-        10405 Berlin (hereinafter “we”, “us” and “our”) runs this website and
+        Kuratorium | Schleifen Musikverlag, L. Wiehe, Saarbrücker Str. 14, 10405
+        Berlin (hereinafter “we”, “us” and “our”) runs this website and
         therefore processes personal data pursuant to the EU General Data
         Protection Regulation (“GDPR”). You may reach out to us via e-mail:
         hallo[at]kuratorium.net. Where we use the term "data", we are referring
