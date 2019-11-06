@@ -25,7 +25,6 @@ const Dates = () => {
     const data = await response.json();
     setDates(data.records);
     setIsLoading(false);
-    console.log(data.records);
   };
   return (
     <>
@@ -65,6 +64,9 @@ const Dates = () => {
                     src={date.fields.Artwork[0].thumbnails.large.url}
                     alt={date.fields.Name}
                     style={{ zIndex: `${index}` }}
+                    className=
+                    {date.fields.Artwork[0].thumbnails.large.height > date.fields.Artwork[0].thumbnails.large.width ?
+                    `portrait` : `landscape`}
                   />
                 </div>
               )}
