@@ -12,9 +12,8 @@ const Intro = () => {
       <a className="email" href="mailto:hallo@kuratorium.net">
         hallo@kuratorium.net
       </a>
-      <br />
-      <br />
       <p>:::</p>
+      <br />
       <p>Disclaimer: </p>
       Despite careful checks of content linked to websites other than this,
       Kuratorium cannot be considered liable for the content of other websites,
@@ -108,6 +107,7 @@ const Intro = () => {
           authority at any time.
         </p>
       </p>
+      <br />
       <p>:::</p>
     </div>
   );

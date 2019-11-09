@@ -3,10 +3,11 @@
 .welcome {
     margin-top: 40%;
     vertical-align: middle;
-    max-width: 330px;
+    max-width: 284px;
     height: 200px;
     overflow: scroll;
     text-align: justify;
+    cursor: default;
   
     @media screen and (max-width: $break-small) {
         padding: 0;
@@ -18,7 +19,7 @@
       font-size: 1.1em;
       font-weight: 200;
       font-style: normal;
-      margin-bottom: 30px;
+      margin-bottom: 110px;
       @media screen and (max-width: $break-small) {
           position: absolute;
           top: 10%;

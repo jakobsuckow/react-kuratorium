@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 require("dotenv").config();
 const Dates = () => {
-  const feedUrl = `https://cadillac33.netlify.com/.netlify/functions/getFeed`;
-  const datesUrl = `https://cadillac33.netlify.com/.netlify/functions/getDates`;
+  const feedUrl = `https://cadillac33.netlify.com/.netlify/functions/getFeed`
+  const datesUrl = `https://cadillac33.netlify.com/.netlify/functions/getDates`
   const [dates, setDates] = useState([]);
   const [feed, setFeed] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -10,6 +10,7 @@ const Dates = () => {
   useEffect(() => {
     getDates();
     getFeed();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getFeed = async () => {
@@ -59,14 +60,13 @@ const Dates = () => {
               <li>{date.fields.Country}</li>
               <li>{date.fields.MusicBy}</li>
               {date.fields.Artwork && (
-                <div className="hoverImage">
+                <div className=
+                {date.fields.Artwork[0].thumbnails.large.height > date.fields.Artwork[0].thumbnails.large.width ?
+                  `hoverImage portrait` : `hoverImage landscape`}>
                   <img
                     src={date.fields.Artwork[0].thumbnails.large.url}
                     alt={date.fields.Name}
-                    style={{ zIndex: `${index}` }}
-                    className=
-                    {date.fields.Artwork[0].thumbnails.large.height > date.fields.Artwork[0].thumbnails.large.width ?
-                    `portrait` : `landscape`}
+                    style={{ zIndex: `${index}` }}                   
                   />
                 </div>
               )}
