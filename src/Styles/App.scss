@@ -29,7 +29,7 @@ $break-large: 1200px;
   transition: all 2s;
 
   @media screen and (max-width: $break-small) {
-    overflow-y: auto;
+    overflow-y: visible;
   }
 }
 
