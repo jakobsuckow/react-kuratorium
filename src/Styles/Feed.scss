@@ -3,6 +3,9 @@
 .event {
   margin-bottom: 6px;
   cursor: pointer;
+  a {
+    text-decoration: none;
+  }
 }
 
 .hoverImage {
@@ -20,6 +23,16 @@
   max-width: 50%;
 }
 
+.event figcaption {
+  display: none;
+  visibility: hidden;
+}
+
+.event:hover figcaption {
+  display: block;
+  visibility: visible;
+}
+
 .event img {
   display: none;
   visibility: hidden;
@@ -32,11 +45,10 @@
 
 .feed {
   text-decoration: underline;
+  a {
+    text-decoration: none;
+  }
 }
-
-// .date {
-//   margin-bottom: 6px;
-// }
 
 // Loading Animation
 

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 require("dotenv").config();
 const Dates = () => {
-  const feedUrl = `https://cadillac33.netlify.com/.netlify/functions/getFeed`;
-  const datesUrl = `https://cadillac33.netlify.com/.netlify/functions/getDates`;
+  const apiKey = `keycZExl0AEV9g3vb`;
+  const feedUrl = `https://api.airtable.com/v0/appemKlsSSYmto60q/Feed?api_key=${apiKey}`;
+  const datesUrl = `https://api.airtable.com/v0/appemKlsSSYmto60q/Events?api_key=${apiKey}`;
   const [dates, setDates] = useState([]);
   const [feed, setFeed] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -69,11 +70,14 @@ const Dates = () => {
                         : `hoverImage landscape`
                     }
                   >
-                    <img
-                      src={date.fields.Artwork[0].thumbnails.large.url}
-                      alt={date.fields.Name}
-                      style={{ zIndex: `${index}` }}
-                    />
+                    <figure>
+                      <img
+                        src={date.fields.Artwork[0].thumbnails.large.url}
+                        alt={date.fields.Name}
+                        style={{ zIndex: `${index}` }}
+                      />
+                      <figcaption>{date.fields.ArtworkBy}</figcaption>
+                    </figure>
                   </div>
                 )}
               </ul>
