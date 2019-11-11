@@ -26,6 +26,7 @@
 .event figcaption {
   display: none;
   visibility: hidden;
+  color: white;
 }
 
 .event:hover figcaption {
@@ -44,7 +45,7 @@
 }
 
 .feed {
-  text-decoration: underline;
+  cursor: pointer;
   a {
     text-decoration: none;
   }

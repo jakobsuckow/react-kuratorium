@@ -39,7 +39,7 @@ const Dates = () => {
             <a href={f.fields.Link}>
               <ul key={f.id} className="feed">
                 <li>{f.fields.Date}</li>
-                <li>{f.fields.Headline}</li>
+                <li className="underline">{f.fields.Headline}</li>
                 <li></li>
               </ul>
             </a>
