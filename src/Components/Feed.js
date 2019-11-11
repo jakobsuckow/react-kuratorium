@@ -52,6 +52,7 @@ const Dates = () => {
       ) : (
         <>
           {dates.map((date, index) => (
+            <a href={date.fields.Link} >
             <ul key={date.id} className="event">
               <li className="date">{date.fields.Date}</li>
               <li>{date.fields.Name}</li>
@@ -78,6 +79,7 @@ const Dates = () => {
 
               {date.fields.Link && <a href={date.fields.Link}>Go to Event</a>}
             </ul>
+            </a>
           ))}
         </>
       )}
