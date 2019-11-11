@@ -35,13 +35,13 @@ const Dates = () => {
       ) : (
         <>
           {feed.map(f => (
-            <ul key={f.id} className="date">
-              <li>{f.fields.Date}</li>
-              <li>{f.fields.Headline}</li>
-              <li>
-                <a href={f.fields.Link}>read more</a>
-              </li>
-            </ul>
+            <a href={f.fields.Link}>
+              <ul key={f.id} className="feed">
+                <li>{f.fields.Date}</li>
+                <li>{f.fields.Headline}</li>
+                <li></li>
+              </ul>
+            </a>
           ))}
         </>
       )}
@@ -52,33 +52,31 @@ const Dates = () => {
       ) : (
         <>
           {dates.map((date, index) => (
-            <a href={date.fields.Link} >
-            <ul key={date.id} className="event">
-              <li className="date">{date.fields.Date}</li>
-              <li>{date.fields.Name}</li>
-              <li>{date.fields.Venue}</li>
-              <li>{date.fields.City}</li>
-              <li>{date.fields.Country}</li>
-              <li>{date.fields.MusicBy}</li>
-              {date.fields.Artwork && (
-                <div
-                  className={
-                    date.fields.Artwork[0].thumbnails.large.height >
-                    date.fields.Artwork[0].thumbnails.large.width
-                      ? `hoverImage portrait`
-                      : `hoverImage landscape`
-                  }
-                >
-                  <img
-                    src={date.fields.Artwork[0].thumbnails.large.url}
-                    alt={date.fields.Name}
-                    style={{ zIndex: `${index}` }}
-                  />
-                </div>
-              )}
-
-              {date.fields.Link && <a href={date.fields.Link}>Go to Event</a>}
-            </ul>
+            <a href={date.fields.Link}>
+              <ul key={date.id} className="event">
+                <li className="date">{date.fields.Date}</li>
+                <li>{date.fields.Name}</li>
+                <li>{date.fields.Venue}</li>
+                <li>{date.fields.City}</li>
+                <li>{date.fields.Country}</li>
+                <li>{date.fields.MusicBy}</li>
+                {date.fields.Artwork && (
+                  <div
+                    className={
+                      date.fields.Artwork[0].thumbnails.large.height >
+                      date.fields.Artwork[0].thumbnails.large.width
+                        ? `hoverImage portrait`
+                        : `hoverImage landscape`
+                    }
+                  >
+                    <img
+                      src={date.fields.Artwork[0].thumbnails.large.url}
+                      alt={date.fields.Name}
+                      style={{ zIndex: `${index}` }}
+                    />
+                  </div>
+                )}
+              </ul>
             </a>
           ))}
         </>
