@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../Assets/kuratorium_raw.png";
+import logo from "../Assets/kuratorium-logo.png";
 
 const Intro = () => {
   return (
