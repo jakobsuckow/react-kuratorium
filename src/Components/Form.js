@@ -14,7 +14,7 @@ export default function Form() {
   return (
     <>
 
-    <form action="/.netlify/functions/api/submit-form" method="POST">
+    <form action="http://localhost:9000/.netlify/functions/api/submit-form" method="POST">
       <input type="text" name="email" />
       <input type="submit" value="submit" />
     </form>
