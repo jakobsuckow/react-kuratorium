@@ -5,7 +5,7 @@ export default function Form() {
   const { register, errors } = useForm();
 
   return (
-    <form data-netlify="true">
+    <form method="POST" action="/.netlify/functions/api/submit-form">
       <label htmlFor="email">Email Address:</label>
       <input
         name="email"

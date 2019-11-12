@@ -28,7 +28,7 @@ router.get("/", (req, res) => {
   });
 });
 
-router.get("/submit-form", function(req, res) {
+router.post("/submit-form", function(req, res) {
   const doc = new GoogleSpreadsheet(sheetId);
 
   doc.useServiceAccountAuth(creds, function(err) {
