@@ -35,8 +35,8 @@ router.post("/submit-form", function(req, res) {
     doc.addRow(
       1,
       {
-        date: "=NOW()",
-        email: req.body
+        date: "=TODAY()",
+        email: JSON.stringify(req.body.email).replace(/['"]+/g, "")
       },
       callback
     );

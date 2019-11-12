@@ -3,7 +3,8 @@ import useForm from "react-hook-form";
 
 export default function Form() {
   const { register, handleSubmit, errors } = useForm();
-  const submit = data => {
+  const submit = (e, data) => {
+    e.preventDefault()
     console.log(JSON.stringify(data.email))
     fetch('/.netlify/functions/api/submit-form', {
       method: 'POST',
@@ -11,6 +12,13 @@ export default function Form() {
     })
   }
   return (
+    <>
+    <form method="POST" action="/.netlify/functions/api/submit-form">
+      <input type="text" name="email" />
+      <input type="submit" value="submit" />
+    </form>
+
+
     <form onSubmit={handleSubmit(submit)}>
       <label htmlFor="email">Email Address:</label>
       <input
@@ -24,5 +32,6 @@ export default function Form() {
       {errors.email && "Email address wrong."}
       <input type="submit" name="submit" />
     </form>
+    </>
   );
 }
