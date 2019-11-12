@@ -19,7 +19,7 @@ const creds = {
 };
 
 const app = express();
-app.use(express.json())
+
 
 const router = express.Router();
 
