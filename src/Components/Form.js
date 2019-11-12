@@ -3,9 +3,15 @@ import useForm from "react-hook-form";
 
 export default function Form() {
   const { register, errors } = useForm();
-
+  const submit = e => {
+    e.preventDefault()
+    fetch('/.netlify/functions/api/submit-form', {
+      method: 'POST',
+      body: JSON.stringify(email)
+    })
+  }
   return (
-    <form method="POST" action="/.netlify/functions/api/submit-form">
+    <form onSubmit={submit}>
       <label htmlFor="email">Email Address:</label>
       <input
         name="email"
