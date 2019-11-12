@@ -3,11 +3,10 @@ import useForm from "react-hook-form";
 
 export default function Form() {
   const { register, handleSubmit, errors } = useForm();
-  const submit = e => {
-    e.preventDefault()
+  const submit = data => {
     fetch('/.netlify/functions/api/submit-form', {
       method: 'POST',
-      body: JSON.stringify(email)
+      body: JSON.stringify(data.email)
     })
   }
   return (
@@ -15,6 +14,7 @@ export default function Form() {
       <label htmlFor="email">Email Address:</label>
       <input
         name="email"
+        id="email"
         ref={register({
           required: true,
           pattern: /^\S+@\S+$/i
