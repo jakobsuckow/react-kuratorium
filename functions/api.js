@@ -37,7 +37,7 @@ router.post("/submit-form", function(req, res) {
       1,
       {
         date: "=TODAY()",
-        email: JSON.stringify(req.body.email).replace(/['"]+/g, "")
+        email: JSON.stringify(req.body)
       },
       callback
     );
