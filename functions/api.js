@@ -36,7 +36,7 @@ router.post("/submit-form", function(req, res) {
       1,
       {
         date: "=NOW()",
-        email: "netlify-test-email"
+        email: req.body
       },
       callback
     );
