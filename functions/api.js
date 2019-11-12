@@ -44,9 +44,9 @@ router.post("/submit-form", function(req, res) {
 
     function callback(err) {
       if (err) {
-        console.log(err);
+        throw new Error
       } else {
-        console.log("success");
+        res.send('success')
       }
     }
   });
