@@ -24,6 +24,9 @@ $break-large: 1200px;
 }
 
 .row > div {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
   overflow-y: scroll;
   padding: 0 15px;
   transition: all 2s;
@@ -31,6 +34,12 @@ $break-large: 1200px;
   @media screen and (max-width: $break-small) {
     overflow-y: visible;
   }
+}
+
+.row > div::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+  -ms-overflow-style: none;
 }
 
 .row > .intro {
